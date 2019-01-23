@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>company profile design</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body id="home">
+
+  <div class="loader"></div>
+
+  <!-- main container with clearfix -->
+  <div class="container cf">
+
+      <!-- nav-bar -->
+      <nav class="nav-bar row cf">
+        <div class="logo">
+          <div id="bg-logo">
+            <img src="./img/rocket-launch.png" alt="rocket image">
+            <span>rocket</span>
+          </div>
+        </div>
+        <ul>
+          <li><a href="#home" class="page-scroll">Home</a></li>
+          <li><a href="#whyus" class="page-scroll">Why Us</a></li>
+          <li><a href="#portfolio" class="page-scroll">Portfolio</a></li>
+          <li><a href="#contact" class="page-scroll">Contact</a></li>
+          <li class="icon"><a href="#" id="icon">&#9776;</a></li>
+        </ul>
+      </nav>
+      <!-- end of nav-bar -->
+
+    <!-- slider hero image -->
+    <div class="slider">
+      <div class="slide fade">
+        <span class="sNumber">1/4</span>
+        <img src="./img/1.jpg" alt="gambar1">
+        <span class="sCaption">
+          <h4>HEADLINE 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vel rem molestiae quod alias.</p>
+        </span>
+      </div>
+      <div class="slide fade">
+        <span class="sNumber">2/4</span>
+        <img src="./img/2.jpg" alt="gambar2">
+        <span class="sCaption">
+          <h4>HEADLINE 2</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vel rem molestiae quod alias.</p>
+        </span>
+      </div>
+      <div class="slide fade">
+        <span class="sNumber">3/4</span>
+        <img src="./img/3.jpg" alt="gambar3">
+        <span class="sCaption">
+          <h4>HEADLINE 3</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vel rem molestiae quod alias.</p>
+        </span>
+      </div>
+      <div class="slide fade">
+        <span class="sNumber">4/4</span>
+        <img src="./img/4.jpg" alt="gambar4">
+        <span class="sCaption">
+          <h4>HEADLINE 4</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vel rem molestiae quod alias.</p>
+        </span>
+      </div>
+      <span class="prev" onclick="pSlide(-1)">&#10094;</span>
+      <span class="next" onclick="pSlide(1)">&#10095;</span>
+    </div>
+    <!-- end of hero image -->
+
+    <!-- why us -->
+    <section id="whyus">
+      <div class="row cf">
+        <div class="col-12 serv">
+          <h2>Why Us ?</h2>
+        </div>
+      </div>
+      <div class="row cf">
+        <div class="col-4 col-s-4 serv">
+          <img src="./img/service.png" alt="service">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-4 col-s-4 serv">
+          <img src="./img/price.png" alt="price">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-4 col-s-4 serv">
+          <img src="./img/24.png" alt="24 hour">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </section>
+    <!-- end of why us -->
+
+    <!-- portfolio -->
+    <section id="portfolio">
+      <div class="row cf">
+        <div class="col-12">
+          <h2>Portfolio</h2>
+        </div>
+      </div>
+      <div class="row cf port">
+        <div class="col-6 col-s-6 ft ft1">
+          <video poster="./img/1.jpg" controls>
+            <source src="#" type="video/mp4">
+          Your browser does not support the video tag!
+          </video>
+        </div>
+        <div class="col-6 col-s-6 ft ft2">
+          <h2>Video Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button type="button" name="button">Watch Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- end of portfolio -->
+
+    <div id="contact"></div>
+    <!-- footer -->
+    <div class="row footer cf" id="footer">
+      <div class="col-4 col-s-4">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-4 col-s-4">
+        <h2>Partner List</h2>
+        <img src="./img/facebook.png" alt="facebook">
+        <img src="./img/twitter.png" alt="twitter">
+        <img src="./img/google-plus.png" alt="google plus">
+        <img src="./img/whatsapp.png" alt="whats app">
+        <img src="./img/youtube.png" alt="youtube">
+        <img src="./img/instagram.png" alt="instagram">
+      </div>
+      <div class="col-4 col-s-4">
+        <h2>Contact Us</h2>
+        <form method="post">
+          <input class="input" id="email" type="email" name="email" placeholder="your email">
+          <textarea class="input" id="message" name="message" rows="8" cols="80" placeholder="your mesaage"></textarea>
+          <input id="submit" type="submit" name="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    <div class="top">top</div>
+    <!-- end of footer -->
+
+  </div>
+  <!-- end of main container -->
+
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
