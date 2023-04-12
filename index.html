@@ -1,12 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julian's Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+
+    <meta name="title" content="Padli Yulian Portfolio">
+    <meta name="author" content="Padli Yulian">
+    <meta name="description" content="Padli Yulian, Portfolio, Full Stack Web Developer">
+
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="og:site_name" content="Padli Yulian Portfolio">
+    <meta name="og:type" content="article">
+    <meta name="og:image" content="./assets/images/julian.jpg">
+    <meta name="og:url" content="https://padliyulian.github.io">
+
+    <!-- style tailwind -->
+    <link rel="stylesheet" href="./assets/css/app.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
-<body>
-    <p>it's work ...</p>
+<body class="dark:bg-dark">
+    <!-- nav -->
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+        <div class="container px-4 lg:px-40">
+            <div class="relative flex items-center justify-between">
+                <div>
+                    <a href="#" class="block py-6 text-2xl font-bold text-primary">Julian</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button style="right: .1rem;" id="hamburger" name="hamburger" type="button" class="absolute block lg:hidden">
+                        <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+                    </button>
+  
+                    <nav
+                        id="nav-menu"
+                        class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+                    >
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#about" class="mx-8 flex py-2 text-base text-teal-600 group-hover:text-primary">
+                                    About
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#portfolio" class="mx-8 flex py-2 text-base text-teal-600 group-hover:text-primary">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact" class="mx-8 flex py-2 text-base text-teal-600 group-hover:text-primary">
+                                    Contact
+                                </a>
+                            </li>
+                            <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-teal-600">light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-teal-600">dark</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- body -->
+    <div class="container mx-auto px-4 lg:px-40">
+
+        <!-- home -->
+        <div style="height: 100vh;" id="about" class="flex items-center">
+            <div>
+                <h2 class="dark:text-white text-2xl font-bold text-center">About Me</h2>
+                <div class="grid gap-4 grid-cols-1 md:grid-cols-2 py-6">
+                    <div class="dark:text-white m-auto">
+                        <h2 class="text-xl font-bold">Padli Yulian</h2>
+                        <p class="my-4 text-justify">
+                            I'am Full Stack Web Developer with experience in software development using old and modern techniques with Linux, PHP, Laravel, Javasrcipt, VueJS, ReactJS, RESTfull API.
+                        </p>
+                        <a href="#contact" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-white hover:text-teal-600 hover:border hover:border-teal-600">
+                            Read More
+                        </a>
+                        <a href="#portfolio" class="inline-block text-center ml-4 w-32 bg-white text-teal-600 border-solid border border-teal-600 px-4 py-2 rounded-md shadow-sm hover:bg-teal-600 hover:text-white">
+                            Portfolio
+                        </a>
+                    </div>
+                    <div>
+                        <img class="w-full" src="./assets/images/work.svg" alt="working image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- portfolio -->
+        <div id="portfolio" class="pt-24">
+            <h2 class="dark:text-white text-2xl font-bold text-center">Portfolio</h2>
+            <div class="grid gap-4 grid-cols-1 md:grid-cols-2 py-6">
+
+                <!-- project -->
+                <div>
+                    <img class="w-full" src="./assets/images/nft.png" alt="nft image">
+                </div>
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">NFT Daily App</h2>
+                    <p class="my-4 text-justify">
+                        Making NFTs more accessible than ever before! We cover the most eye-catching drops, exciting events, and high-profile releases that keep the wheels of the Non-Fungible Token industry turning!
+                    </p>
+                    <a href="https://nftdaily.app" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">WALLETADS</h2>
+                    <p class="my-4 text-justify">
+                        WALLETADS is the new powerhouse of performance marketing in Web 3.0
+                    </p>
+                    <a href="https://www.walletads.io" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="./assets/images/walletads.jpg" alt="walletads image">
+                </div>
+
+                <div>
+                    <img class="w-3/4 mx-auto" src="./assets/images/mooti.png" alt="mooti image">
+                </div>
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Mooti App</h2>
+                    <p class="my-4 text-justify">
+                        Affirmations are a powerful tool that can help you rewire your brain and change negative thought patterns. By verbally affirming your dreams and ambitions, you can empower yourself and build self-esteem. With daily affirmations, you can set reminders to be delivered throughout the day and choose from many intentions to focus on.
+                    </p>
+                    <a href="https://mooti.app" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">McSmart App</h2>
+                    <p class="my-4 text-justify">
+                        Introducing McSmart, the ultimate app for general knowledge facts that you can use in any situation! Whether you're at work, hanging out with friends, on a date, or spending time with family, McSmart has got you covered. With 10 categories to choose from, including celebrities, science and technology, and wonders of the world, you'll have a wealth of fascinating information at your fingertips.
+                    </p>
+                    <a href="https://mcsmartapp.com" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+                <div>
+                    <img class="w-3/4 mx-auto" src="./assets/images/mcsmart.png" alt="mcsmart image">
+                </div>
+
+                <div>
+                    <img class="w-full mx-auto" src="./assets/images/ads.png" alt="findyourinsurance image">
+                </div>
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Insurance Ads</h2>
+                    <p class="my-4 text-justify">
+                        Independant health Insurance comparison with focus on your personal needs and wishes.
+                    </p>
+                    <a href="https://findyourinsurance.ch" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">ERA Indonesia</h2>
+                    <p class="my-4 text-justify">
+                        Property Agent. PT. ERA GRAHAREALTY (known as ERA INDONESIA) is the sole holder of the ERA master franchise for all of Indonesia, officially operating on May 8, 1992. Currently, ERA Indonesia already has offices of active Brokerage Members and Marketing Associates who are well-known in major cities in Indonesia Jakarta.
+                    </p>
+                    <a href="https://eraindonesia.com" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full mx-auto" src="./assets/images/era.png" alt="era image">
+                </div>
+
+                <div>
+                    <img class="w-full mx-auto" src="./assets/images/les.png" alt="les online image">
+                </div>
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Les Online</h2>
+                    <p class="my-4 text-justify">
+                        Dengan menggunakan Online Learning waktu untuk belajar pun bisa dilakukan kapan saja dan dimana saja.
+                    </p>
+                    <a href="https://les-online.com" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Fabrication</h2>
+                    <p class="my-4 text-justify">
+                        PT Lambang Jaya adalah perusahaan konstruksi yang bergerak dalam beberapa bidang
+                    </p>
+                    <a href="https://lambangjaya.com" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full mx-auto" src="./assets/images/lj.png" alt="fabrication image">
+                </div>
+
+                <div>
+                    <img class="w-full mx-auto" src="./assets/images/lsp.png" alt="lsp image">
+                </div>
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">LSP Digital Indonesia</h2>
+                    <p class="my-4 text-justify">
+                        Lembaga Sertifikasi Profesi Teknologi Digital atau disingkat LSP Teknologi Digital (LSP TD) mendapatkan lisensi dari Badan Nasional Sertifikasi Profesi (BNSP) untuk melakukan proses Sertifikasi di bidang Teknologi dan Informasi.
+                    </p>
+                    <a href="https://lspdigital.id" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Creative Team</h2>
+                    <p class="my-4 text-justify">
+                        Responsive website build with webpack, NPM, SASS, KISS, DRY, BEM naming convention, 7-1 CSS architecture, babel, bootstrap grid, jquery, eslint, stylelint, html hint, autoprefixer, minify, and twig engine template.
+                    </p>
+                    <a href="https://react-app23.firebaseapp.com" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="./assets/images/react.png" alt="warunk image">
+                </div>
+
+                <!-- landing page -->
+                <div>
+                    <img class="w-full" src="./assets/images/spm.png" alt="tapioca image">
+                </div>
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Tapioca Starch</h2>
+                    <p class="my-4 text-justify">
+                        Responsive website build with webpack, NPM, SASS, KISS, DRY, BEM naming convention, 7-1 CSS architecture, babel, bootstrap grid, jquery, eslint, stylelint, html hint, autoprefixer, minify, and twig engine template.
+                    </p>
+                    <a href="https://padliyulian.github.io/spm" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Warunk @Jaman#Now</h2>
+                    <p class="my-4 text-justify">
+                        Responsive website build with webpack, NPM, SASS, KISS, DRY, BEM naming convention, 7-1 CSS architecture, babel, bootstrap grid, jquery, eslint, stylelint, html hint, autoprefixer, minify, and twig engine template.
+                    </p>
+                    <a href="https://padliyulian.github.io/warunk01" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="./assets/images/warunk.jpg" alt="warunk image">
+                </div>
+
+                <div>
+                    <img class="w-full" src="./assets/images/lambang.png" alt="fabrication image">
+                </div>
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Lambang Jaya</h2>
+                    <p class="my-4 text-justify">
+                        Responsive website build with webpack, NPM, SASS, KISS, DRY, BEM naming convention, 7-1 CSS architecture, babel, bootstrap grid, jquery, eslint, stylelint, html hint, autoprefixer, minify, and twig engine template.
+                    </p>
+                    <a href="http://lambangjayagroup.com" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+
+                <div class="dark:text-white m-auto">
+                    <h2 class="text-xl font-bold">Rocket Team</h2>
+                    <p class="my-4 text-justify">
+                        Responsive website build with webpack, NPM, SASS, KISS, DRY, BEM naming convention, 7-1 CSS architecture, babel, bootstrap grid, jquery, eslint, stylelint, html hint, autoprefixer, minify, and twig engine template.
+                    </p>
+                    <a href="https://padliyulian.github.io/landing01" target="_blank" class="inline-block text-center w-32 bg-teal-600 text-white px-4 py-2 rounded-md shadow-sm border hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                        View
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="./assets/images/rocket.png" alt="fabrication image">
+                </div>
+            
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div style="height: 100vh;" id="contact" class="pt-24">
+            <h2 class="dark:text-white text-2xl font-bold text-center mt-6">Contact</h2>
+            <div class="grid gap-4 grid-cols-1 md:grid-cols-2 py-6">
+                <div class="dark:text-white">
+                    <p>
+                        <span class="text-teal-600 fa-brands fa-whatsapp fa-fw"></span>
+                        <a class="text-teal-600" href="https://wa.me/+62895609736135" target="_blank">whatsapp</a>
+                    </p>
+                    <p>
+                        <span class="text-teal-600 fa-regular fa-envelope fa-fw"></span>
+                        <a class="text-teal-600" href="mailto:padliyulian@gmail.com">email</a>
+                    </p>
+                    <p>
+                        <span class="text-teal-600 fa-brands fa-facebook fa-fw"></span>
+                        <a class="text-teal-600" href="https://www.facebook.com/padli.yulian" target="_blank">
+                            facebook
+                        </a>
+                    </p>
+                    <p>
+                        <span class="text-teal-600 fa-brands fa-linkedin fa-fw"></span>
+                        <a class="text-teal-600" href="https://www.linkedin.com/in/padli-yulian-56383189/" target="_blank">
+                            linkedin
+                        </a>
+                    </p>
+                    <p>
+                        <span class="text-teal-600 fa-brands fa-github fa-fw"></span>
+                        <a class="text-teal-600" href="https://github.com/padliyulian" target="_blank">
+                            github
+                        </a>
+                    </p>
+                </div>
+                <div class="dark:text-white">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="grid gap-4 grid-cols-1 md:grid-cols-2 py-6">
+            <div class="dark:text-white">
+                <a class="text-teal-600" href="https://padliyulian.github.io/">
+                    <span>&copy</span>
+                    <span id="year"></span>
+                    <span>-</span>
+                    <span>padliyulian.github.io</span>
+                </a>
+            </div>
+            <div class="hidden md:block text-teal-600 text-right">
+                <span>Julian's</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- top -->
+    <a href="#about" class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse" id="to-top">
+        <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
+    </a>
+
+    <!-- script -->
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
