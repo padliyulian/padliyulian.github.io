@@ -7,6 +7,7 @@ window.onscroll = function () {
     const toTop = document.querySelector('#to-top');
 
     if (window.pageYOffset > fixedNav) {
+        portfolioAnimate();
         header.classList.add('navbar-fixed');
         toTop.classList.remove('hidden');
         toTop.classList.add('flex');
@@ -54,3 +55,20 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 } else {
     darkToggle.checked = false;
 }
+
+function onloadAnimate() {
+    document.querySelector('.navbar').classList.add('animated', 'fadeInDown');
+    document.querySelector('.about').classList.add('animated', 'fadeInUp');
+}
+
+function portfolioAnimate() {
+    document.querySelectorAll('.animate-left').forEach((el, i) => {
+        el.classList.add('animated','bounceInLeft');
+    });
+
+    document.querySelectorAll('.animate-right').forEach((el, i) => {
+        el.classList.add('animated','bounceInRight');
+    });
+}
+  
+onloadAnimate();
